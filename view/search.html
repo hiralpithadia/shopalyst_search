@@ -210,8 +210,8 @@
 						    <span class="badge badge-danger mb-1 text-capitalize" data-ng-if ="product.newArrival"><i class="fa fa-star-o"></i> New</span><br>
 						</p>	
 						<p class="card-text"><b>&#8377;{{product.offerPrice}}</b>
-					    	<span class="text-muted salePrice pl-1">&#8377;{{product.salePrice}}</span>
-					    	<span class="text-success discount pl-1"><b>{{product.discount}}% off</b></span>
+					    	<span class="text-muted salePrice pl-1" data-ng-if ="product.discount != 0">&#8377;{{product.salePrice}}</span>
+					    	<span class="text-success discount pl-1" data-ng-if ="product.discount != 0"><b>{{product.discount}}% off</b></span>
 					    </p>
 					    <div data-ng-if="product.active" class="productActive">
 							<i class="fa fa-circle text-right pr-2 mt-2 text-success"></i>
@@ -257,8 +257,8 @@
 						   	<span class="badge badge-info mb-1 text-capitalize"><i class="fa fa-tags"></i> {{product.merchant}}</span>
 						    <span class="badge badge-danger mb-1 text-capitalize" data-ng-if ="product.newArrival"><i class="fa fa-star-o"></i> New</span><br>
 						    <p class="card-text"><b>&#8377;{{product.offerPrice}}</b>
-						    	<span class="text-muted salePrice pl-1">&#8377;{{product.salePrice}}</span>
-						    	<span class="text-success discount pl-1"><b>{{product.discount}}% off</b></span>
+						    	<span class="text-muted salePrice pl-1" data-ng-if ="product.discount != 0">&#8377;{{product.salePrice}}</span>
+						    	<span class="text-success discount pl-1" data-ng-if ="product.discount != 0"><b>{{product.discount}}% off</b></span>
 						    </p>
 					  	</div>
 					  	<div data-ng-if="product.active" class="productActive">
